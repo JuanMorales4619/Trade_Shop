@@ -7,7 +7,7 @@ import axios from "axios";
 const Publication = () => {
   const [Sendform, ChallengeSendForm] = useState(false);
   const initialValues = {
-    name: "",
+    "name": "",
     description: "",
     price: 0,
     amount: 0,
@@ -66,7 +66,26 @@ const Publication = () => {
   };
   const ApiConnection = async (initialValues) => {
     const formData = new FormData();
-    formData.append("files", initialValues);
+    const data = {
+      "codigo": 0,
+      "Descripcion":initialValues.description,
+      "precio": initialValues.price,
+      "cantidad":initialValues.amount,
+      "vendedor":{
+        "codigo":1
+      },
+      "TipoVenta":{
+        "descripcion":initialValues.TypeOfSale
+      },
+      "Porducto":{
+        "nombre":initialValues.nombre,
+        "TipoProducto":{
+          "descripcion":initialValues.TypeOfProduct
+        },
+        "imagen":initialValues.imagen
+      }
+    }
+    formData.append("files", data);
     await axios
       .post("http://localhost:8080/create", formData)
       .then((response) => {
