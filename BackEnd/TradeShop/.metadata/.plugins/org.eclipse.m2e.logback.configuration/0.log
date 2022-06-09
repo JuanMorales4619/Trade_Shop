@@ -1896,3 +1896,53 @@
 2022-06-09 10:43:15,179 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Eclipse WorkSpace\TradeShop\DataTradeShop\src\main\resources
 2022-06-09 10:43:15,179 [Worker-130: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-06-09 10:43:15,180 [Worker-130: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Eclipse WorkSpace\TradeShop\DataTradeShop\src\test\resources
+2022-06-09 10:53:27,570 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-06-09 10:53:29,453 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,454 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\CrossCutting\src\main\resources
+2022-06-09 10:53:29,457 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,459 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\CrossCutting\src\test\resources
+2022-06-09 10:53:29,559 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCutting: co.edu.uco.crosscutting:CrossCutting:0.0.1-SNAPSHOT with classifier  to /CrossCutting/target/classes
+2022-06-09 10:53:29,564 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,565 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\CrossCuttingTradeShop\src\main\resources
+2022-06-09 10:53:29,565 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,566 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\CrossCuttingTradeShop\src\test\resources
+2022-06-09 10:53:29,680 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCuttingTradeShop: co.edu.uco.tradeShop:CrossCuttingTradeShop:0.0.1-SNAPSHOT with classifier  to /CrossCuttingTradeShop/target/classes
+2022-06-09 10:53:29,680 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCutting: co.edu.uco.crosscutting:CrossCutting:0.0.1-SNAPSHOT with classifier  to /CrossCutting/target/classes
+2022-06-09 10:53:29,685 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,686 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\DTOTradeShop\src\main\resources
+2022-06-09 10:53:29,687 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,687 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\DTOTradeShop\src\test\resources
+2022-06-09 10:53:29,829 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DTOTradeShop: co.edu.uco.tradeShop:DTOTradeShop:0.0.1-SNAPSHOT with classifier  to /DTOTradeShop/target/classes
+2022-06-09 10:53:29,829 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCuttingTradeShop: co.edu.uco.tradeShop:CrossCuttingTradeShop:0.0.1-SNAPSHOT with classifier  to /CrossCuttingTradeShop/target/classes
+2022-06-09 10:53:29,829 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCutting: co.edu.uco.crosscutting:CrossCutting:0.0.1-SNAPSHOT with classifier  to /CrossCutting/target/classes
+2022-06-09 10:53:29,831 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,832 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\DataTradeShop\src\main\resources
+2022-06-09 10:53:29,833 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,833 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\DataTradeShop\src\test\resources
+2022-06-09 10:53:29,850 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DTOTradeShop: co.edu.uco.tradeShop:DTOTradeShop:0.0.1-SNAPSHOT with classifier  to /DTOTradeShop/target/classes
+2022-06-09 10:53:29,850 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DataTradeShop: co.edu.uco.tradeShop:DataTradeShop:0.0.1-SNAPSHOT with classifier  to /DataTradeShop/target/classes
+2022-06-09 10:53:29,850 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCuttingTradeShop: co.edu.uco.tradeShop:CrossCuttingTradeShop:0.0.1-SNAPSHOT with classifier  to /CrossCuttingTradeShop/target/classes
+2022-06-09 10:53:29,850 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCutting: co.edu.uco.crosscutting:CrossCutting:0.0.1-SNAPSHOT with classifier  to /CrossCutting/target/classes
+2022-06-09 10:53:29,852 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,853 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\BussinesLogicTradeShop\src\main\resources
+2022-06-09 10:53:29,854 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-06-09 10:53:29,854 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\BussinesLogicTradeShop\src\test\resources
+2022-06-09 10:53:31,505 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DTOTradeShop: co.edu.uco.tradeShop:DTOTradeShop:0.0.1-SNAPSHOT with classifier  to /DTOTradeShop/target/classes
+2022-06-09 10:53:31,505 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/BussinesLogicTradeShop: co.edu.uco.tradeShop:BussinesLogicTradeShop:0.0.1-SNAPSHOT with classifier  to /BussinesLogicTradeShop/target/classes
+2022-06-09 10:53:31,505 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/DataTradeShop: co.edu.uco.tradeShop:DataTradeShop:0.0.1-SNAPSHOT with classifier  to /DataTradeShop/target/classes
+2022-06-09 10:53:31,505 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCuttingTradeShop: co.edu.uco.tradeShop:CrossCuttingTradeShop:0.0.1-SNAPSHOT with classifier  to /CrossCuttingTradeShop/target/classes
+2022-06-09 10:53:31,505 [Worker-2: Building] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/CrossCutting: co.edu.uco.crosscutting:CrossCutting:0.0.1-SNAPSHOT with classifier  to /CrossCutting/target/classes
+2022-06-09 10:53:33,059 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-09 10:53:33,059 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-06-09 10:53:33,062 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-06-09 10:53:33,073 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-06-09 10:53:33,076 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-09 10:53:33,076 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-06-09 10:53:33,076 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\ApiTradeShop\src\test\resources
+2022-06-09 10:53:33,206 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-09 10:53:33,206 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-06-09 10:53:33,206 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-06-09 10:53:33,213 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-06-09 10:53:33,221 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-06-09 10:53:33,221 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-06-09 10:53:33,221 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\TradeShop\Trade_Shop\BackEnd\TradeShop\ApiTradeShop\src\test\resources

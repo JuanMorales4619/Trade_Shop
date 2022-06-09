@@ -9,3 +9,5 @@ e
 5src/co/edu/uco/tradeShop/data/factory/DAOFactory.java,7\f\7fca7e02b9d5b713fe87a0b20642ff7e3cfdfcde
 v
 Fsrc/co/edu/uco/tradeShop/data/factory/azuresql/AzureSqlDAOFactory.java,5\b\5bbdc57c780c35660490f566f91ad8bb3a4f838d
+q
+Asrc/co/edu/uco/tradeShop/data/dao/azuresql/CiudadAzureSqlDAO.java,a\5\a5e92a74f7b4995d3eba67715c77e5d6d6b9fe78
