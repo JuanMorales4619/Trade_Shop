@@ -1,0 +1,20 @@
+package co.edu.uco.tradeShop.api.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import co.edu.uco.TradeShop.dto.ProductoDTO;
+
+@RestController
+@RequestMapping("/api/v1/producto")
+public class ProductoController {
+
+	@PostMapping
+	public void create(@RequestBody ProductoDTO dto) {
+		System.out.println("Estoy en crear");
+	}
+	
+	
+}

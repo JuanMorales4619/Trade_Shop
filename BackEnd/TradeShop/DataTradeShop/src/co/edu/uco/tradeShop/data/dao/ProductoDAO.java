@@ -1,5 +1,7 @@
 package co.edu.uco.tradeShop.data.dao;
 
+import java.util.List;
+
 import co.edu.uco.TradeShop.dto.ProductoDTO;
 
 public interface ProductoDAO {
@@ -10,5 +12,5 @@ public interface ProductoDAO {
 	
 	void delete(int id);
 
-	void find(ProductoDTO producto);
+	List<ProductoDTO> find(ProductoDTO producto);
 }

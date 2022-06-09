@@ -1,2 +1,7 @@
 1654726499305	Delete element
 1654782057615	Rename type 'Pais'
+1654796993595	Encapsulate field 'novedad'
+1654797082098	Encapsulate field 'pedido'
+1654797200964	Encapsulate field 'estadoPedido'
+1654798659925	Encapsulate field 'cantidad'
+1654805943281	Encapsulate field 'producto'

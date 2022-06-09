@@ -9,14 +9,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import co.edu.uco.TradeShop.dto.CiudadDTO;
 import co.edu.uco.TradeShop.dto.DepartamentoDTO;
-import co.edu.uco.crosscutting.util.numeric.UtilNumeric;
 import co.edu.uco.crosscutting.util.object.UtilObject;
 import co.edu.uco.crosscutting.util.text.UtilText;
 import co.edu.uco.tradeShop.crosscutting.exception.TradeShopException;
 import co.edu.uco.tradeShop.dao.connection.ConnectionSQL;
-import co.edu.uco.tradeShop.data.dao.CiudadDAO;
 import co.edu.uco.tradeShop.data.dao.DepartamentoDAO;
 
 public class DepartamentoAzureSqlDAO extends ConnectionSQL implements DepartamentoDAO{
@@ -37,18 +34,10 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("SELECT id, name").append(SPACE);
-		sb.append("FROM IdType").append(SPACE);
+		sb.append("SELECT codigo, descripcion").append(SPACE);
+		sb.append("FROM Departamento").append(SPACE);
 
 		if (!UtilObject.getUtilObject().isNull(departamento)) {
-
-			if (UtilNumeric.getUtilObject().isGreatherThan(departamento.getCodigo(), 0)) {
-
-				sb.append("WHERE codigo = ? ");
-				parameters.add(departamento.getCodigo());
-				setWhere = false;
-
-			}
 
 			if (!UtilText.isEmpty(departamento.getDescripcion())) {
 				sb.append(setWhere ? "WHERE " : "AND ");
@@ -58,7 +47,7 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 
 		}
 
-		sb.append("ORDER BY name ASC");
+		sb.append("ORDER BY descripcion ASC");
 
 		try (PreparedStatement preparedStatement = getConnection().prepareStatement(sb.toString())) {
 
@@ -72,10 +61,10 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 			throw exception;
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to retrieve IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to retrieve Departments on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to retrieve IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to retrieve Departments on Azure SQL Server", exception);
 		}
 
 		return results;
@@ -89,10 +78,10 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 			results = assembleResults(resultset);
 		}catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to execute the Query for recovery the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to execute the Query for recovery the Departments on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to execute the Query for recovery the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to execute the Query for recovery the Departments on Azure SQL Server", exception);
 		}
 		return results;
 	}
@@ -108,10 +97,10 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 			throw exception;
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to recover the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to recover the Departments on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to recover the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to recover the Departments on Azure SQL Server", exception);
 		}
 
 		return results;
@@ -125,10 +114,10 @@ public class DepartamentoAzureSqlDAO extends ConnectionSQL implements Departamen
 
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to assemble the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to assemble the Departments on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to assemble the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to assemble the Departments on Azure SQL Server", exception);
 		}
 
 		return dto;

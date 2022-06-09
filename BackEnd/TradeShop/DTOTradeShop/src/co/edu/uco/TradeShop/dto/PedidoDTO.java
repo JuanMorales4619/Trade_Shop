@@ -13,30 +13,30 @@ public class PedidoDTO {
 	private int cantidad;
 	private Date fecha;
 	private PersonaDTO comprador;
-	private HistorialPedidoDTO historial;
 	private PublicacionDTO publicacion;
 	private ProductoDTO producto;
+	private EstadoPedidoDTO estadoPedido;
 	
 	public PedidoDTO() {
 		super();
 		setDescripcion(UtilText.EMPTY);
 		setComprador(new PersonaDTO());
-		setHistorial(new HistorialPedidoDTO());
 		setPublicacion(new PublicacionDTO());
 		setProducto(new ProductoDTO());
+		setEstadoPedido(new EstadoPedidoDTO());
 	}
 	
-	public PedidoDTO(int codigo, String descripcion, int cantidad, Date fecha, PersonaDTO comprador,
-			HistorialPedidoDTO historial, PublicacionDTO publicacion, ProductoDTO producto) {
+	public PedidoDTO(int codigo, String descripcion, int cantidad, Date fecha, PersonaDTO comprador
+			, PublicacionDTO publicacion, ProductoDTO producto, EstadoPedidoDTO estadoPedido) {
 		super();
 		setCodigo(codigo);
 		setDescripcion(descripcion);
 		setCantidad(cantidad);
 		setFecha(fecha);
 		setComprador(comprador);
-		setHistorial(historial);
 		setPublicacion(publicacion);
 		setProducto(producto);
+		setEstadoPedido(estadoPedido);
 	}
 	
 	public int getCodigo() {
@@ -69,12 +69,6 @@ public class PedidoDTO {
 	public void setComprador(PersonaDTO comprador) {
 		this.comprador = UtilObject.getUtilObject().getDefault(comprador, new PersonaDTO());
 	}
-	public HistorialPedidoDTO getHistorial() {
-		return historial;
-	}
-	public void setHistorial(HistorialPedidoDTO historial) {
-		this.historial = UtilObject.getUtilObject().getDefault(historial, new HistorialPedidoDTO());
-	}
 	public PublicacionDTO getPublicacion() {
 		return publicacion;
 	}
@@ -86,6 +80,12 @@ public class PedidoDTO {
 	}
 	public void setProducto(ProductoDTO producto) {
 		this.producto = UtilObject.getUtilObject().getDefault(producto, new ProductoDTO());
+	}
+	public EstadoPedidoDTO getEstadoPedido() {
+		return estadoPedido;
+	}
+	public void setEstadoPedido(EstadoPedidoDTO estadoPedido) {
+		this.estadoPedido = UtilObject.getUtilObject().getDefault(estadoPedido, new EstadoPedidoDTO());
 	}
 	
 	

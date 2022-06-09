@@ -1,5 +1,8 @@
 package co.edu.uco.TradeShop.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import co.edu.uco.crosscutting.util.object.UtilObject;
 import co.edu.uco.crosscutting.util.text.UtilText;
 
@@ -8,24 +11,21 @@ public class ProductoDTO {
 	private int codigo;
 	private String nombre;
 	private TipoProductoDTO tipoProducto;
-	private PublicacionDTO publicacion;
 	private String imagen;
 	
 	public ProductoDTO() {
 		super();
 		setNombre(UtilText.EMPTY);
 		setTipoProducto(new TipoProductoDTO());
-		setPublicacion(new PublicacionDTO());
 		setImagen(UtilText.EMPTY);
 	}
 	
-	public ProductoDTO(int codigo, String nombre, TipoProductoDTO tipoProducto, PublicacionDTO publicacion,
+	public ProductoDTO(int codigo, String nombre, TipoProductoDTO tipoProducto,
 			String imagen) {
 		super();
 		setCodigo(codigo);
 		setNombre(nombre);
 		setTipoProducto(tipoProducto);
-		setPublicacion(publicacion);
 		setImagen(imagen);
 	}
 	
@@ -47,12 +47,6 @@ public class ProductoDTO {
 	public void setTipoProducto(TipoProductoDTO tipoProducto) {
 		this.tipoProducto = UtilObject.getUtilObject().getDefault(tipoProducto, new TipoProductoDTO());
 	}
-	public PublicacionDTO getPublicacion() {
-		return publicacion;
-	}
-	public void setPublicacion(PublicacionDTO publicacion) {
-		this.publicacion = UtilObject.getUtilObject().getDefault(publicacion, new PublicacionDTO());
-	}
 	public String getImagen() {
 		return imagen;
 	}
@@ -60,5 +54,18 @@ public class ProductoDTO {
 		this.imagen = UtilText.getDefault(imagen);
 	}
 	
-	
+	public void validationName(List<String> validationMessages){
+		validationMessages = UtilObject.getUtilObject().getDefault(validationMessages, new ArrayList<>());
+		
+		if(UtilText.isEmpty(getNombre())) {
+			validationMessages.add("Name of id type is required!!!");
+		}else if(UtilText.getDefault(getNombre()).length() > 20) {
+			validationMessages.add("Lenght of name of product must be less or equals to 20 characters!!!");
+		}else if(!UtilText.getDefault(getNombre()).matches("^[a-zA-ZÒ—·¡È…ÌÕÛ”˙⁄ ]*$")) {
+			validationMessages.add("Name of product contains invalid characters!!!");
+		}
+	}
 }
+
+
+

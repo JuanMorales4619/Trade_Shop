@@ -1,0 +1,14 @@
+package co.edu.uco.bussineslogic.business;
+
+import co.edu.uco.TradeShop.dto.PublicacionDTO;
+
+public interface PublicacionBusiness {
+
+	void create(PublicacionDTO publicacion);
+	
+	void update(PublicacionDTO publicacion);
+	
+	void delete(int id);
+
+	void find(PublicacionDTO publicacion);
+}

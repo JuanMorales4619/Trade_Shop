@@ -15,11 +15,12 @@ import co.edu.uco.tradeShop.data.dao.PublicacionDAO;
 import co.edu.uco.tradeShop.data.dao.TipoIdentificacionDAO;
 import co.edu.uco.tradeShop.data.dao.TipoProductoDAO;
 import co.edu.uco.tradeShop.data.dao.TipoVentaDAO;
+import co.edu.uco.tradeShop.data.factory.azuresql.AzureSqlDAOFactory;
 
 public abstract class DAOFactory {
 	
 	public static DAOFactory getDaoFactory() {
-		return null;
+		return AzureSqlDAOFactory.create();
 	}
 	
 	public abstract void commitTransaction();

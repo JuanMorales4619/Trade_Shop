@@ -1,0 +1,32 @@
+package co.edu.uco.tradeShop.businesslogic.impl;
+
+import co.edu.uco.TradeShop.dto.PublicacionDTO;
+import co.edu.uco.tradeShop.bussineslogic.business.PublicacionBusiness;
+
+public class PublicacionBusinessImpl implements PublicacionBusiness{
+
+	@Override
+	public void create(PublicacionDTO publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(PublicacionDTO publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void find(PublicacionDTO publicacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

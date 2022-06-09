@@ -1,0 +1,12 @@
+package co.edu.uco.bussineslogic.business;
+
+import java.util.List;
+
+import co.edu.uco.TradeShop.dto.PaisDTO;
+
+public class PaisBussines {
+
+	List<PaisDTO> find(PaisDTO pais);
+
+	List<PaisDTO> find(PaisDTO pais);
+}

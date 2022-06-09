@@ -1,0 +1,14 @@
+package co.edu.uco.bussineslogic.facade;
+
+import co.edu.uco.TradeShop.dto.ProductoDTO;
+
+public interface ProductoBusiness {
+
+	void create(ProductoDTO producto);
+	
+	void update(ProductoDTO producto);
+	
+	void delete(int id);
+
+	void find(ProductoDTO producto);
+}

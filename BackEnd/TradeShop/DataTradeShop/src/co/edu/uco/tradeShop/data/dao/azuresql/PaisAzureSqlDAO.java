@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.TradeShop.dto.PaisDTO;
-import co.edu.uco.crosscutting.util.numeric.UtilNumeric;
 import co.edu.uco.crosscutting.util.object.UtilObject;
 import static co.edu.uco.crosscutting.util.text.UtilText.SPACE;
 import co.edu.uco.crosscutting.util.text.UtilText;
@@ -34,18 +33,10 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("SELECT id, name").append(SPACE);
-		sb.append("FROM IdType").append(SPACE);
+		sb.append("SELECT codigo, descripcion").append(SPACE);
+		sb.append("FROM Pais").append(SPACE);
 
 		if (!UtilObject.getUtilObject().isNull(pais)) {
-
-			if (UtilNumeric.getUtilObject().isGreatherThan(pais.getCodigo(), 0)) {
-
-				sb.append("WHERE codigo = ? ");
-				parameters.add(pais.getCodigo());
-				setWhere = false;
-
-			}
 
 			if (!UtilText.isEmpty(pais.getDescripcion())) {
 				sb.append(setWhere ? "WHERE " : "AND ");
@@ -55,7 +46,7 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 
 		}
 
-		sb.append("ORDER BY name ASC");
+		sb.append("ORDER BY descripcion ASC");
 
 		try (PreparedStatement preparedStatement = getConnection().prepareStatement(sb.toString())) {
 
@@ -69,10 +60,10 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 			throw exception;
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to retrieve IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to retrieve Countrys on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to retrieve IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to retrieve Countrys on Azure SQL Server", exception);
 		}
 
 		return results;
@@ -86,10 +77,10 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 			results = assembleResults(resultset);
 		}catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to execute the Query for recovery the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to execute the Query for recovery the Countrys on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to execute the Query for recovery the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to execute the Query for recovery the Countrys on Azure SQL Server", exception);
 		}
 		return results;
 	}
@@ -105,10 +96,10 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 			throw exception;
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to recover the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to recover the Countrys on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to recover the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to recover the Countrys on Azure SQL Server", exception);
 		}
 
 		return results;
@@ -122,10 +113,10 @@ public class PaisAzureSqlDAO extends ConnectionSQL implements PaisDAO{
 
 		} catch (SQLException exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"There was a problem trying to assemble the IdTypes on Azure SQL Server", exception);
+					"There was a problem trying to assemble the Countrys on Azure SQL Server", exception);
 		} catch (Exception exception) {
 			throw TradeShopException.buildTechnicalDataExeption(
-					"An unexpected has ocurred problem trying to assemble the IdTypes on Azure SQL Server", exception);
+					"An unexpected has ocurred problem trying to assemble the Countrys on Azure SQL Server", exception);
 		}
 
 		return dto;

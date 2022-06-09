@@ -1,5 +1,7 @@
 package co.edu.uco.tradeShop.data.dao;
 
+import java.util.List;
+
 import co.edu.uco.TradeShop.dto.PublicacionDTO;
 
 public interface PublicacionDAO {
@@ -10,5 +12,5 @@ public interface PublicacionDAO {
 	
 	void delete(int id);
 
-	void find(PublicacionDTO publicacion);
+	List<PublicacionDTO> find(PublicacionDTO publicacion);
 }

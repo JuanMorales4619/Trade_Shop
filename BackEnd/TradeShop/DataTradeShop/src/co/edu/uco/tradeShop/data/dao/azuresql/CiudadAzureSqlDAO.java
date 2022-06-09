@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.uco.TradeShop.dto.CiudadDTO;
-import co.edu.uco.crosscutting.util.numeric.UtilNumeric;
 import co.edu.uco.crosscutting.util.object.UtilObject;
 import co.edu.uco.crosscutting.util.text.UtilText;
 import co.edu.uco.tradeShop.crosscutting.exception.TradeShopException;
@@ -35,18 +34,10 @@ public class CiudadAzureSqlDAO extends ConnectionSQL implements CiudadDAO{
 
 		StringBuilder sb = new StringBuilder();
 
-		sb.append("SELECT id, name").append(SPACE);
-		sb.append("FROM IdType").append(SPACE);
+		sb.append("SELECT codigo, descripcion").append(SPACE);
+		sb.append("FROM Ciudad").append(SPACE);
 
 		if (!UtilObject.getUtilObject().isNull(ciudad)) {
-
-			if (UtilNumeric.getUtilObject().isGreatherThan(ciudad.getCodigo(), 0)) {
-
-				sb.append("WHERE codigo = ? ");
-				parameters.add(ciudad.getCodigo());
-				setWhere = false;
-
-			}
 
 			if (!UtilText.isEmpty(ciudad.getDescripcion())) {
 				sb.append(setWhere ? "WHERE " : "AND ");
@@ -56,7 +47,7 @@ public class CiudadAzureSqlDAO extends ConnectionSQL implements CiudadDAO{
 
 		}
 
-		sb.append("ORDER BY name ASC");
+		sb.append("ORDER BY descripcion ASC");
 
 		try (PreparedStatement preparedStatement = getConnection().prepareStatement(sb.toString())) {
 

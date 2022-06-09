@@ -7,19 +7,19 @@ public class NovedadDTO {
 
 	private int codigo;
 	private String descripcion;
-	private PersonaDTO usuario;
+	private EstadoPedidoDTO estadoPedido;
 	
 	public NovedadDTO() {
 		super();
 		setDescripcion(UtilText.EMPTY);
-		setUsuario(new PersonaDTO());
+		setEstadoPedido(new EstadoPedidoDTO());
 	}
 	
-	public NovedadDTO(int codigo, String descripcion, PersonaDTO usuario) {
+	public NovedadDTO(int codigo, String descripcion, EstadoPedidoDTO estadoPedido) {
 		super();
 		setCodigo(codigo);
 		setDescripcion(descripcion);
-		setUsuario(usuario);
+		setEstadoPedido(estadoPedido);
 	}
 	
 	public int getCodigo() {
@@ -34,11 +34,11 @@ public class NovedadDTO {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = UtilText.getDefault(descripcion);
 	}
-	public PersonaDTO getUsuario() {
-		return usuario;
+	public EstadoPedidoDTO getEstadoPedidoDTO() {
+		return estadoPedido;
 	}
-	public void setUsuario(PersonaDTO usuario) {
-		this.usuario = UtilObject.getUtilObject().getDefault(usuario, new PersonaDTO());
+	public void setEstadoPedido(EstadoPedidoDTO estadoPedido) {
+		this.estadoPedido = UtilObject.getUtilObject().getDefault(estadoPedido, new EstadoPedidoDTO());
 	}
 	
 	

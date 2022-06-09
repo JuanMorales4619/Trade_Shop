@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import co.edu.uco.crosscutting.util.object.UtilObject;
 import co.edu.uco.crosscutting.util.sql.UtilConnection;
 import co.edu.uco.tradeShop.crosscutting.exception.TradeShopException;
 import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionLocation;
@@ -114,12 +113,12 @@ private Connection connection;
 
 	@Override
 	protected void openConnection() {
-		String stringConnection = "jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser;password=4c4d3m1cDmlUs3r;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+		String stringConnection = "jdbc:sqlserver://tradeshop-database-server.database.windows.net:1433;database=TradeShop-DB;user=tradeshop;password=TdSp123#;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 		try {
 			connection = DriverManager.getConnection(stringConnection);
 		}
 		catch(SQLException exception) {
-			throw TradeShopException.buildTechnicalExeption("There was a problem tryin to get the connection with sql server at jdbc:sqlserver://academic-database-server.database.windows.net:1433;database=academic-db;user=academicDmlUser",
+			throw TradeShopException.buildTechnicalExeption("There was a problem tryin to get the connection with sql server at jdbc:sqlserver://tradeshop-database-server.database.windows.net:1433;database=TradeShop-DB;user=tradeshop;",
 					exception, ExceptionType.TECHNICAL, ExceptionLocation.DATA );
 		}
 		 catch(Exception exception) {
@@ -128,7 +127,7 @@ private Connection connection;
 			}
 	}
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		try {
 		AzureSqlDAOFactory azure = new AzureSqlDAOFactory();
 		System.out.println("Conexion obtenida exitosamente");
@@ -139,7 +138,7 @@ private Connection connection;
 		}catch(Exception exception) {
 			System.out.println("Este camino no lo tenia controlado!!!");
 		}
-	}
+	}*/
 
 	
 	

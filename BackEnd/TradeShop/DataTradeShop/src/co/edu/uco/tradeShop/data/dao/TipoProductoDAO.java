@@ -1,8 +1,10 @@
 package co.edu.uco.tradeShop.data.dao;
 
-import co.edu.uco.TradeShop.dto.TipoIdentificacionDTO;
+import java.util.List;
+
+import co.edu.uco.TradeShop.dto.TipoProductoDTO;
 
 public interface TipoProductoDAO {
 
-	void find(TipoIdentificacionDTO tipoProducto);
+	List<TipoProductoDTO> find(TipoProductoDTO tipoProducto);
 }

@@ -10,20 +10,23 @@ public class HistorialPedidoDTO {
 	private Date fecha;
 	private PersonaDTO vendedor;
 	private PersonaDTO comprador;
+	private PedidoDTO pedido;
 	
 	public HistorialPedidoDTO() {
 		super();
 		setFecha(fecha);
 		setVendedor(new PersonaDTO());
 		setComprador(new PersonaDTO());
+		setPedido(new PedidoDTO());
 	}
 	
-	public HistorialPedidoDTO(int codigo, Date fecha, PersonaDTO vendedor, PersonaDTO comprador) {
+	public HistorialPedidoDTO(int codigo, Date fecha, PersonaDTO vendedor, PersonaDTO comprador, PedidoDTO pedido) {
 		super();
 		setCodigo(codigo);
 		setFecha(fecha);
 		setVendedor(vendedor);
 		setComprador(comprador);
+		setPedido(pedido);
 	}
 	
 	public int getCodigo() {
@@ -49,6 +52,12 @@ public class HistorialPedidoDTO {
 	}
 	public void setComprador(PersonaDTO comprador) {
 		this.comprador = UtilObject.getUtilObject().getDefault(comprador, new PersonaDTO());
+	}
+	public PedidoDTO getPedido() {
+		return pedido;
+	}
+	public void setPedido(PedidoDTO pedido) {
+		this.pedido = UtilObject.getUtilObject().getDefault(pedido, new PedidoDTO());
 	}
 	
 	

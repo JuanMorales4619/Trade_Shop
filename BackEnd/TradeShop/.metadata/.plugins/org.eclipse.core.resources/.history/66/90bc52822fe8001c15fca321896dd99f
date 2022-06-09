@@ -1,0 +1,14 @@
+package co.edu.uco.tradeShop.bussineslogic.facade;
+
+import co.edu.uco.TradeShop.dto.PublicacionDTO;
+
+public interface PublicacionFacade {
+
+	void create(PublicacionDTO publicacion);
+	
+	void update(PublicacionDTO publicacion);
+	
+	void delete(int id);
+
+	void find(PublicacionDTO publicacion);
+}

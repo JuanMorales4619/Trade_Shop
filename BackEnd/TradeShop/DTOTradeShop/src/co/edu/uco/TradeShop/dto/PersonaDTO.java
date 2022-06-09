@@ -2,6 +2,7 @@ package co.edu.uco.TradeShop.dto;
 
 import java.util.Date;
 
+import co.edu.uco.crosscutting.util.date.UtilDate;
 import co.edu.uco.crosscutting.util.object.UtilObject;
 import co.edu.uco.crosscutting.util.text.UtilText;
 
@@ -14,18 +15,19 @@ public class PersonaDTO {
 	private Date fechaNacimiento;
 	private TipoIdentificacionDTO tipoIdentificacion;
 	private CiudadDTO ciudad;
+	private NovedadDTO novedad;
 	
 	public PersonaDTO() {
 		super();
 		setNombres(UtilText.EMPTY);
 		setApellidos(UtilText.EMPTY);
-		//setFechaNacimiento(fechaNacimiento);
 		setTipoIdentificacion(new TipoIdentificacionDTO());
 		setCiudad(new CiudadDTO());
+		setNovedad(new NovedadDTO());
 	}
 	
 	public PersonaDTO(int codigo, int identificacion, String nombres, String apellidos, Date fechaNacimiento,
-			TipoIdentificacionDTO tipoIdentificacion, CiudadDTO ciudad) {
+			TipoIdentificacionDTO tipoIdentificacion, CiudadDTO ciudad, NovedadDTO novedad) {
 		super();
 		setCodigo(codigo);
 		setIdentificacion(identificacion);
@@ -34,6 +36,7 @@ public class PersonaDTO {
 		setFechaNacimiento(fechaNacimiento);
 		setTipoIdentificacion(tipoIdentificacion);
 		setCiudad(ciudad);
+		setNovedad(novedad);
 	}
 	
 	public int getCodigo() {
@@ -64,7 +67,7 @@ public class PersonaDTO {
 		return fechaNacimiento;
 	}
 	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento;
+		this.fechaNacimiento = UtilDate.getUtilDate().getDefault(fechaNacimiento);
 	}
 	public TipoIdentificacionDTO getTipoIdentificacion() {
 		return tipoIdentificacion;
@@ -77,6 +80,12 @@ public class PersonaDTO {
 	}
 	public void setCiudad(CiudadDTO ciudad) {
 		this.ciudad = UtilObject.getUtilObject().getDefault(ciudad, new CiudadDTO());
+	}
+	public NovedadDTO getNovedad() {
+		return novedad;
+	}
+	public void setNovedad(NovedadDTO novedad) {
+		this.novedad = UtilObject.getUtilObject().getDefault(novedad, new NovedadDTO());
 	}
 	
 	
