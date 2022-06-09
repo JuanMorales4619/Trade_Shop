@@ -1,0 +1,48 @@
+package co.edu.uco.tradeShop.data.factory.azuresql;
+
+import java.sql.Connection;
+
+import co.edu.uco.tradeShop.data.dao.PublicacionDAO;
+import co.edu.uco.tradeShop.data.factory.DAOFactory;
+
+public class AzureSqlDAOFactory extends DAOFactory{
+
+	private Connection connection;
+	
+	@Override
+	public void openConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void getConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void commit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void rollback() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PublicacionDAO getPublicacionDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

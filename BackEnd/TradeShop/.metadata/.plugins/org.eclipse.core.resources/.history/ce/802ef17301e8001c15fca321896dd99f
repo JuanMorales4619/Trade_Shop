@@ -1,0 +1,5 @@
+package co.edu.uco.crosscutting.util.date;
+
+public class UtilDate {
+
+}

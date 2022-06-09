@@ -1,0 +1,28 @@
+package co.edu.uco.tradeShop.data.factory;
+
+import java.sql.Connection;
+
+import co.edu.uco.tradeShop.data.dao.PublicacionDAO;
+
+public abstract class DAOFactory {
+	
+	public static DAOFactory getDaoFactory() {
+		return null;
+	}
+	
+	public abstract void commitTransaction();
+	
+	public abstract void rollbackTransaction();
+	
+	protected abstract void openConnection();
+	
+	protected abstract Connection getConnection();
+	
+	public abstract void initTransaction();
+	
+	public abstract PublicacionDAO getPublicacionDAO();
+	
+	public void closeConection() {
+		
+	}
+}

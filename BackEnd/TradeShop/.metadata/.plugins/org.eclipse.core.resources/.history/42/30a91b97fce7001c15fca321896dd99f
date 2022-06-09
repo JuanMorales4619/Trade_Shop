@@ -1,0 +1,17 @@
+package co.edu.uco.TradeShop.dto;
+
+public class PublicacionDTO {
+
+	public int id;
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	} 
+	
+	
+}
