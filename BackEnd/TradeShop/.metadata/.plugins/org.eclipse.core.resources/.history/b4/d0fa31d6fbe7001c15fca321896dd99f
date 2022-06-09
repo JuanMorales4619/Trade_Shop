@@ -1,0 +1,14 @@
+package co.edu.uco.TradeShop.dto;
+
+import java.util.Date;
+
+public class PersonaDTO {
+	
+	private int codigo;
+	private int identificacion;
+	private String nombres;
+	private String apellidos;
+	private Date fechaNacimiento;
+	private 
+	
+}

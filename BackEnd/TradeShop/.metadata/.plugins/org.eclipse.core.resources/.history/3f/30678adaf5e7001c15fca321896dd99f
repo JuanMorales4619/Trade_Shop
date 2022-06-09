@@ -1,0 +1,87 @@
+package co.edu.uco.tradeShop.data.factory.azuresql;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import co.edu.uco.crosscutting.util.object.UtilObject;
+import co.edu.uco.crosscutting.util.sql.UtilConnection;
+import co.edu.uco.tradeShop.crosscutting.exception.TradeShopException;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionLocation;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionType;
+import co.edu.uco.tradeShop.data.dao.PublicacionDAO;
+import co.edu.uco.tradeShop.data.factory.DAOFactory;
+
+public class AzureSqlDAOFactory extends DAOFactory{
+
+	private Connection connection;
+	
+	private AzureSqlDAOFactory() {
+		openConnection();
+	}
+	
+	@Override
+	protected void openConnection() {
+		if(!UtilObject.getUtilObject().isNull(connection) && !UtilConnection.isClosed(connection)) {
+			throw TradeShopException.buildTechnicalException("It큦 not posible open a connection because the connection it큦 already is open");
+		}
+		
+		String stringConnection = "jdbc:sqlserver://PCBENDITA\\SQLEXPRESS:1433;database=master;user=usuarioSQL;password=12345;loginTimeout=30;";
+		
+		try {
+			connection = DriverManager.getConnection(stringConnection);
+		}catch(SQLException exception){
+			throw TradeShopException.buildTechnicalException("There was a problem trying to get the connection with sql server at jdbc:sqlserver://PCBENDITA\\SQLEXPRESS:1433;Database=TradeShop;user=usuarioSQL",
+					exception, ExceptionType.TECHNICAL, ExceptionLocation.DATA);
+		}catch(Exception exception) {
+			throw TradeShopException.buildTechnicalException("An unexpected problem has ocurred trying to get the connection with sql server at jdbc:sqlserver://PCBENDITA\\SQLEXPRESS:1433;Database=TradeShop;user=usuarioSQL",
+					exception, ExceptionType.TECHNICAL, ExceptionLocation.DATA);
+		}
+	}
+	
+	public static void main(String[] args) {
+		try {
+		AzureSqlDAOFactory azure = new AzureSqlDAOFactory();
+		System.out.println("Conexion obtenida exitosamente");
+		}catch(TradeShopException exception) {
+			System.out.println(exception.getTecnicalMessage());
+			System.out.println(exception.getType());
+			exception.printStackTrace();
+		}catch(Exception exception) {
+			System.out.println("Este camino no lo tenia controlado!!!");
+		}
+	}
+
+	@Override
+	protected Connection getConnection() {
+		return connection;
+	}
+
+	@Override
+	public void closeConnection() {
+		if(UtilObject.getUtilObject().isNull(connection) && UtilConnection.isClosed(connection)) {
+			throw TradeShopException.buildTechnicalException("It큦 not posible close a connection because it큦 already is closed or is null");
+		}
+	}
+
+	@Override
+	public void commit() {
+		if(UtilObject.getUtilObject().isNull(connection) && UtilConnection.isClosed(connection)) {
+			throw TradeShopException.buildTechnicalException("It큦 not posible close a connection because it큦 already is closed or is null");
+		}
+	}
+
+	@Override
+	public void rollback() {
+		if(UtilObject.getUtilObject().isNull(connection) && UtilConnection.isClosed(connection)) {
+			throw TradeShopException.buildTechnicalException("It큦 not posible close a connection because it큦 already is closed or is null");
+		}
+	}
+
+	@Override
+	public PublicacionDAO getPublicacionDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

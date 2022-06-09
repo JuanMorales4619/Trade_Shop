@@ -1,0 +1,5 @@
+package co.edu.uco.tradeShop.crosscutting.exception.enumeration;
+
+public enum ExceptionLocation {
+
+}

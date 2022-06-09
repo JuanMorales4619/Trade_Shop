@@ -1,0 +1,30 @@
+package co.edu.uco.tradeShop.crosscutting.exception;
+
+import co.edu.uco.crosscutting.exeption.GeneralException;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionLocation;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionType;
+
+public class GradesException extends GeneralException{
+
+	private static final long serialVersionUID = 6894466519536139891L;
+	private ExceptionType type;
+	private ExceptionLocation location;
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+	public ExceptionType getType() {
+		return type;
+	}
+	public ExceptionLocation getLocation() {
+		return location;
+	}
+	
+	private void setType(ExceptionType type) {
+		this.type = type;
+	}
+	private void setLocation(ExceptionLocation location) {
+		this.location = location;
+	}
+	
+}

@@ -1,0 +1,8 @@
+package co.edu.uco.tradeShop.data.dao;
+
+import co.edu.uco.TradeShop.dto.PaisDTO;
+
+public interface PaisDAO {
+	
+	void find(PaisDTO pais);
+}

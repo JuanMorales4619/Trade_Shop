@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="co.edu.uco.TradeShop.dto.PublicacionDTO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.tradeShop.data.factory.DAOFactory"/>
+    <fullyQualifiedTypeName name="co.edu.uco.tradeShop.data.dao.PublicacionDAO"/>
+    <fullyQualifiedTypeName name="co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionType"/>
+    <fullyQualifiedTypeName name="co.edu.uco.crosscutting.exeption.GeneralException"/>
+    <fullyQualifiedTypeName name="co.edu.uco.crosscutting.util.object.UtilObject"/>
+    <fullyQualifiedTypeName name="co.edu.uco.crosscutting.util.sql.UtilConnection"/>
+    <fullyQualifiedTypeName name="co.edu.uco.tradeShop.crosscutting.exception.GradesException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+</qualifiedTypeNameHistroy>

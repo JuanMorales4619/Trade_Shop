@@ -1,0 +1,82 @@
+package co.edu.uco.tradeShop.data.factory.azuresql;
+
+import java.awt.GraphicsDevice;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import co.edu.uco.crosscutting.util.object.UtilObject;
+import co.edu.uco.crosscutting.util.sql.UtilConnection;
+import co.edu.uco.tradeShop.crosscutting.exception.TradeShopException;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionLocation;
+import co.edu.uco.tradeShop.crosscutting.exception.enumeration.ExceptionType;
+import co.edu.uco.tradeShop.data.dao.PublicacionDAO;
+import co.edu.uco.tradeShop.data.factory.DAOFactory;
+
+public class AzureSqlDAOFactory extends DAOFactory{
+
+	private Connection connection;
+	
+	@Override
+	public void openConnection() {
+		if(UtilObject.getUtilObject().isNull(connection) || UtilConnection.isClosed(connection)) {
+			throw TradeShopException.buildTechnicalException("It´s not posible open a connection because the connection it´s already is open");
+		}
+		
+		String stringConnection = "jdbc:sqlserver://erfgPCBENDITA\\SQLEXPRESS:1433;Database=TradeShop;user=usuarioSQL;password=12345;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+		
+		try {
+			connection = DriverManager.getConnection(stringConnection);
+		}catch(SQLException exception){
+			throw TradeShopException.buildTechnicalException("There was a problem trying to get the connection with sql server at jdbc:sqlserver://PCBENDITA\\\\SQLEXPRESS:1433;Database=TradeShop;user=usuarioSQL",
+					exception, ExceptionType.TECHNICAL, ExceptionLocation.DATA);
+		}catch(Exception exception) {
+			throw TradeShopException.buildTechnicalException("An unexpected problem has ocurred trying to get the connection with sql server at jdbc:sqlserver://PCBENDITA\\\\SQLEXPRESS:1433;Database=TradeShop;user=usuarioSQL",
+					exception, ExceptionType.TECHNICAL, ExceptionLocation.DATA);
+		}
+	}
+	
+	public static void main(String[] args) {
+		try {
+		AzureSqlDAOFactory azure = new AzureSqlDAOFactory();
+		System.out.println("Conexion obtenida exitosamente");
+		}catch(TradeShopException exception) {
+			System.out.println(exception.getTecnicalMessage());
+			System.out.println(exception.getType());
+			exception.printStackTrace();
+		}catch(Exception exception) {
+			System.out.println("Este camino no lo tenia controlado!!!");
+		}
+	}
+
+	@Override
+	public void getConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeConnection() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void commit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void rollback() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public PublicacionDAO getPublicacionDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
