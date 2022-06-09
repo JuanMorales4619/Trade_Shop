@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="10A40E6C-1EDE-D570-F53E-FAC60E4AB126" name="TipoIdentificacion">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:07 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="54141A63-3E1E-84AA-B280-EEEB78BD9B3F">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:54 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="BAF3AD3E-C8B2-3D17-906D-8F3B920E9EF9">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:54 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F6869668-2E2D-77C6-CFD3-6D5609EFCB89" name="TipoIdentificacion_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:54 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54141A63-3E1E-84AA-B280-EEEB78BD9B3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

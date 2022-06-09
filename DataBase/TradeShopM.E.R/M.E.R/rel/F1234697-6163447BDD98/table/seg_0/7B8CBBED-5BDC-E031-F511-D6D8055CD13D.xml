@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7B8CBBED-5BDC-E031-F511-D6D8055CD13D" name="Producto">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:52:27 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="F989FF8F-9E24-C227-B40C-8FCEE1C9B653">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:53:23 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="A50AE8BF-50AD-5531-78B9-E2CAF7B911F3">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:53:23 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="21540165-A349-B666-2692-D41E74A4FBFB">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:53:23 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoProducto" id="7EE762EF-AB42-29DB-A2E5-8CB93AFA1C3D">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:59:52 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3ABCC25C-C3C7-C15B-1BA9-03F79138C98D" referredColumn="29003758-AECE-2E52-482B-F82CFF6CBC7A"/>
+</associations>
+</Column>
+<Column name="Publicacion_codigo" id="C045B7A0-866E-BD92-63F8-F591F86D62B8">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 18:29:14 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6427808F-7324-D721-8C24-86A7FAD8AA21" referredColumn="5B919D09-0A19-7D86-6435-73D2A06F8222"/>
+</associations>
+</Column>
+<Column name="Pedido_codigo" id="CC178C09-59A2-16BD-28C5-35FFD616C66A">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:49:09 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E39F6720-860E-63DC-BC05-750ED5303C72" referredColumn="59429D00-4E3B-E40F-EC6E-E2DA04CA0BB4"/>
+</associations>
+</Column>
+<Column name="imagen" id="BFA8C5DB-5B4C-DBB3-15E4-785ABCCF6154">
+<createdBy>user</createdBy>
+<createdTime>2022-06-08 23:32:27 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D17C1E75-9AB8-3061-C06D-F58DF234E212" name="Producto_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:53:23 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F989FF8F-9E24-C227-B40C-8FCEE1C9B653"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="32CEB7F2-3EAF-46D1-E8DE-2499D2F4A5CF" name="Producto__IDX">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 18:33:30 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C045B7A0-866E-BD92-63F8-F591F86D62B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9C215A7F-3643-1EB5-CB0B-3EC9E900CD34" name="Producto__IDXv1v1">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:49:19 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC178C09-59A2-16BD-28C5-35FFD616C66A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E569128C-56FF-5332-A3AD-83627EFB62CE" name="Producto_TipoProducto_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:59:52 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EE762EF-AB42-29DB-A2E5-8CB93AFA1C3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="864DA666-D3D5-3732-DA35-64597E96BF65" name="Producto_Publicacion_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 18:29:14 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C045B7A0-866E-BD92-63F8-F591F86D62B8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="74B2C291-AECE-B76C-81C4-E4E66D965271" name="Producto_Pedido_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:49:09 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CC178C09-59A2-16BD-28C5-35FFD616C66A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

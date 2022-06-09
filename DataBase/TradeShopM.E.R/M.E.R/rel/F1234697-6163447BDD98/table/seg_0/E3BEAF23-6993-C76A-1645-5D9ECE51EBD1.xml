@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E3BEAF23-6993-C76A-1645-5D9ECE51EBD1" name="Persona">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:44:08 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="EAC5B034-77AE-8AB1-CC28-5B01E36EE58D">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="identificacion" id="8B264583-29F2-5639-E36E-023EA942B672">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombres" id="96E01707-BC34-B580-A973-8DDF33FCDAA6">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellidos" id="D4031B75-30BC-D4EF-5516-00BAF42AAA20">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaNacimiento" id="F522744C-9573-62A6-A66E-B91D0D9F4A60">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TipoIdentificacion_codigo" id="639FFD5E-0C7A-ADCE-CEEA-4728DA068A35">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:48:16 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="90B6FCAD-1CAB-690F-632B-541AA2E1A446" referredColumn="54141A63-3E1E-84AA-B280-EEEB78BD9B3F"/>
+</associations>
+</Column>
+<Column name="Ciudad_codigo" id="04C4E1C8-3A22-8BAE-7CDF-C4EC94B818CC">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:30:51 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3829C6E3-ACA5-7BB4-CFD5-C973136B4305" referredColumn="C1807637-8B34-AF15-FC74-D54F0EEC6D16"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0BC8813E-BABC-99C7-0D49-0906BE006BDE" name="Persona_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:47:01 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EAC5B034-77AE-8AB1-CC28-5B01E36EE58D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5C7CA93F-827C-A712-200D-5A53012D5956" name="Persona_TipoIdentificacion_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:48:16 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="639FFD5E-0C7A-ADCE-CEEA-4728DA068A35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4BB54BB2-8639-2C54-196E-97C44BBED4E6" name="Persona_Ciudad_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:30:51 UTC</createdTime>
+<ownerDesignName>M.E.R</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04C4E1C8-3A22-8BAE-7CDF-C4EC94B818CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
