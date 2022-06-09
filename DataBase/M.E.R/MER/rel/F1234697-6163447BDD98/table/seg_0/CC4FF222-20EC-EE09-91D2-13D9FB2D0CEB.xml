@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC4FF222-20EC-EE09-91D2-13D9FB2D0CEB" name="EstadoPedido">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:36:07 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="869996E8-9B87-5281-FF6F-3FBB12C03472">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:36:38 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="C3808A39-2731-3F1E-E0D7-D68F042D0CA3">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:36:38 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A14636C-35FC-A310-E017-632C4F3E3D86" name="EstadoPedido_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:36:38 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="869996E8-9B87-5281-FF6F-3FBB12C03472"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8180C9F7-DE21-77F8-D89C-C803CF351E87" name="EstadoPedido__IDX">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:37:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="6ED21DED-CF21-FEE9-94FC-4B6F1B726963" name="EstadoPedido__IDXv1">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:48:17 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+</indexes>
+</Table>

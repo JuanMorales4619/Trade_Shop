@@ -1,0 +1,182 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7BCD7170-43B6-AA10-3679-5D92118F173E" name="Pedido">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:44:28 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="59429D00-4E3B-E40F-EC6E-E2DA04CA0BB4">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:45:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="C1C04DA2-B89C-9F54-38B7-57925177E552">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:45:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad" id="173BD2A4-1D78-DDF2-C9A7-17DEAFE33A01">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:45:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="DAFEB6E3-608A-21AC-D276-9FC645B6F76F">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:45:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comprador" id="F0EFD721-9E4F-DA4B-9EA7-039741FAC7D3">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:50:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DA7AB2E-B601-6125-4EB0-4CB3BE48B0D4" referredColumn="EAC5B034-77AE-8AB1-CC28-5B01E36EE58D"/>
+</associations>
+</Column>
+<Column name="Publicacion" id="24701442-3752-6679-40A0-5D40C2EEA50F">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:53:13 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="521A1493-C1F5-EF69-7B28-B5333A62C4BD" referredColumn="5B919D09-0A19-7D86-6435-73D2A06F8222"/>
+</associations>
+</Column>
+<Column name="Producto_codigo" id="6BB55747-90B5-D9DA-C5EE-AE77D116D42B">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 14:19:41 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A0572640-A0D2-8340-5BCC-7D087F0298E8" referredColumn="F989FF8F-9E24-C227-B40C-8FCEE1C9B653"/>
+</associations>
+</Column>
+<Column name="EstadoPedido_codigo" id="CFDCF509-DAD8-40DB-831A-133B0772D323">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:11:57 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6341862B-632C-7D34-DA1B-3FD7BDC76206" referredColumn="869996E8-9B87-5281-FF6F-3FBB12C03472"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A0AA26D6-6199-7E24-39A3-8A702823D387" name="Pedido_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:45:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59429D00-4E3B-E40F-EC6E-E2DA04CA0BB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CC508A6-C28C-FE3F-7F19-47019C01C641" name="Pedido__IDX">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 14:18:48 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BB55747-90B5-D9DA-C5EE-AE77D116D42B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05BF25FB-B7C6-F2F0-38CA-EC03540787CC" name="Pedido__IDXv1">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:12:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFDCF509-DAD8-40DB-831A-133B0772D323"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A0F38908-6628-2F84-D31D-797F217E5ED6" name="Pedido_Persona_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:50:55 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F0EFD721-9E4F-DA4B-9EA7-039741FAC7D3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14C0697C-741E-B383-5A63-11EADDF7D2D4" name="Pedido_Publicacion_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:53:13 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24701442-3752-6679-40A0-5D40C2EEA50F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD934C25-EC24-4691-4923-8B153620E013" name="Pedido_Producto_FK">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 14:19:41 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BB55747-90B5-D9DA-C5EE-AE77D116D42B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D1E88731-1548-F8D1-EE85-1F6C718717EA" name="Pedido_EstadoPedido_FK">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:11:57 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFDCF509-DAD8-40DB-831A-133B0772D323"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

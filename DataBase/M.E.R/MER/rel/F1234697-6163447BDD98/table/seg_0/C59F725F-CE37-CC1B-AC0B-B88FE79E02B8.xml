@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C59F725F-CE37-CC1B-AC0B-B88FE79E02B8" name="Novedad">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:33:37 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="8B3CA8D5-9973-023F-5219-CC82B8D1B97A">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:35:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="427FBE0E-AB4E-6087-D4D4-2928211BA9A6">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:35:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EstadoPedido_codigo" id="026FC24C-076F-79CD-BD14-066C13773D47">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:18:14 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="27B018B6-36E0-73A3-8B9E-907909C9A841" referredColumn="869996E8-9B87-5281-FF6F-3FBB12C03472"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A498530C-E01A-C0BB-3A71-6D620927D38F" name="Novedad_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 21:35:47 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B3CA8D5-9973-023F-5219-CC82B8D1B97A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8D6809E7-9B6D-3653-46D5-1F1A500AA383" name="Novedad__IDX">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:18:35 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="026FC24C-076F-79CD-BD14-066C13773D47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8013DBD2-C7CD-3442-34E3-03CE747BD395" name="Novedad_EstadoPedido_FK">
+<createdBy>jmora</createdBy>
+<createdTime>2022-06-09 16:18:14 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="026FC24C-076F-79CD-BD14-066C13773D47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

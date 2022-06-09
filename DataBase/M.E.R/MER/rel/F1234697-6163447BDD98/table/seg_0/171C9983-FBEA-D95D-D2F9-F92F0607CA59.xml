@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="171C9983-FBEA-D95D-D2F9-F92F0607CA59" name="Publicacion">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:48:31 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="codigo" id="5B919D09-0A19-7D86-6435-73D2A06F8222">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:37 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Descripcion" id="404CE74D-FBA0-2002-97B1-77EA0430FA86">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:37 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="505EA254-030F-C4AA-841A-CF073F0A671E">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:37 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cantidad" id="0B51A206-3E6D-5F5F-9561-CDA4533B4FB0">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 18:30:02 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vendedor" id="2F63CDAB-D72D-56DC-8178-8F9E59D5E63B">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EAB8077D-9BA2-0E32-82F9-D764A8AA093C" referredColumn="EAC5B034-77AE-8AB1-CC28-5B01E36EE58D"/>
+</associations>
+</Column>
+<Column name="TipoVenta" id="A7402E1C-B5A4-3E26-E515-DDD01ED811A8">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:52:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF841E8C-680C-C1B6-FFA0-CE6F3882BFD8" referredColumn="45E2FB61-1F16-35A6-0F31-273F3CC953E9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7314FE5-6444-7138-52F6-79B8D78B7B34" name="Publicacion_PK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:37 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5B919D09-0A19-7D86-6435-73D2A06F8222"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9190BED3-C56B-E21B-6D2E-6BE9CA3E9E21" name="Publicacion_Persona_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:50:46 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F63CDAB-D72D-56DC-8178-8F9E59D5E63B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1403DA92-625D-067E-392C-374D22827A2F" name="Publicacion_TipoVenta_FK">
+<createdBy>user</createdBy>
+<createdTime>2022-06-07 17:52:08 UTC</createdTime>
+<ownerDesignName>MER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7402E1C-B5A4-3E26-E515-DDD01ED811A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

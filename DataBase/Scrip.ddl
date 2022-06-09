@@ -15,38 +15,32 @@ CREATE TABLE departamento (
 ALTER TABLE departamento ADD CONSTRAINT departamento_pk PRIMARY KEY ( codigo );
 
 CREATE TABLE estadopedido (
-    codigo         INTEGER NOT NULL,
-    descripcion    VARCHAR(100) NOT NULL,
-    novedad_codigo INTEGER NOT NULL,
-    pedido_codigo  INTEGER NOT NULL
+    codigo      INTEGER NOT NULL,
+    descripcion VARCHAR(100) NOT NULL
 );
-
-CREATE UNIQUE INDEX estadopedido__idx ON
-    estadopedido (
-        novedad_codigo
-    ASC );
-
-CREATE UNIQUE INDEX estadopedido__idxv1 ON
-    estadopedido (
-        pedido_codigo
-    ASC );
 
 ALTER TABLE estadopedido ADD CONSTRAINT estadopedido_pk PRIMARY KEY ( codigo );
 
 CREATE TABLE historialpedido (
-    codigo    INTEGER NOT NULL,
-    fecha     DATE NOT NULL,
-    vendedor  INTEGER NOT NULL,
-    comprador INTEGER NOT NULL
+    codigo        INTEGER NOT NULL,
+    fecha         DATE NOT NULL,
+    vendedor      INTEGER NOT NULL,
+    comprador     INTEGER NOT NULL,
+    pedido_codigo INTEGER NOT NULL
 );
 
 ALTER TABLE historialpedido ADD CONSTRAINT historialpedido_pk PRIMARY KEY ( codigo );
 
 CREATE TABLE novedad (
-    codigo         INTEGER NOT NULL,
-    descripcion    VARCHAR(100) NOT NULL,
-    persona_codigo INTEGER NOT NULL
+    codigo              INTEGER NOT NULL,
+    descripcion         VARCHAR(100) NOT NULL,
+    estadopedido_codigo INTEGER NOT NULL
 );
+
+CREATE UNIQUE INDEX novedad__idx ON
+    novedad (
+        estadopedido_codigo
+    ASC );
 
 ALTER TABLE novedad ADD CONSTRAINT novedad_pk PRIMARY KEY ( codigo );
 
@@ -58,14 +52,25 @@ CREATE TABLE pais (
 ALTER TABLE pais ADD CONSTRAINT pais_pk PRIMARY KEY ( codigo );
 
 CREATE TABLE pedido (
-    codigo      INTEGER NOT NULL,
-    descripcion VARCHAR(200) NOT NULL,
-    cantidad    INTEGER NOT NULL,
-    fecha       DATE NOT NULL,
-    comprador   INTEGER NOT NULL,
-    historial   INTEGER NOT NULL,
-    publicacion INTEGER NOT NULL
+    codigo              INTEGER NOT NULL,
+    descripcion         VARCHAR(200) NOT NULL,
+    cantidad            INTEGER NOT NULL,
+    fecha               DATE NOT NULL,
+    comprador           INTEGER NOT NULL,
+    publicacion         INTEGER NOT NULL,
+    producto_codigo     INTEGER NOT NULL,
+    estadopedido_codigo INTEGER NOT NULL
 );
+
+CREATE UNIQUE INDEX pedido__idx ON
+    pedido (
+        producto_codigo
+    ASC );
+
+CREATE UNIQUE INDEX pedido__idxv1 ON
+    pedido (
+        estadopedido_codigo
+    ASC );
 
 ALTER TABLE pedido ADD CONSTRAINT pedido_pk PRIMARY KEY ( codigo );
 
@@ -76,7 +81,8 @@ CREATE TABLE persona (
     apellidos                 VARCHAR(100) NOT NULL,
     fechanacimiento           DATE,
     tipoidentificacion_codigo INTEGER NOT NULL,
-    ciudad_codigo             INTEGER NOT NULL
+    ciudad_codigo             INTEGER NOT NULL,
+    novedad_codigo            INTEGER NOT NULL
 );
 
 ALTER TABLE persona ADD CONSTRAINT persona_pk PRIMARY KEY ( codigo );
@@ -84,21 +90,14 @@ ALTER TABLE persona ADD CONSTRAINT persona_pk PRIMARY KEY ( codigo );
 CREATE TABLE producto (
     codigo             INTEGER NOT NULL,
     nombre             VARCHAR(50) NOT NULL,
-    descripcion        VARCHAR(200) NOT NULL,
     tipoproducto       INTEGER NOT NULL,
     publicacion_codigo INTEGER NOT NULL,
-    pedido_codigo      INTEGER NOT NULL,
     imagen             VARCHAR(100)
 );
 
 CREATE UNIQUE INDEX producto__idx ON
     producto (
         publicacion_codigo
-    ASC );
-
-CREATE UNIQUE INDEX producto__idxv1v1 ON
-    producto (
-        pedido_codigo
     ASC );
 
 ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( codigo );
@@ -143,12 +142,8 @@ ALTER TABLE departamento
     ADD CONSTRAINT departamento_pais_fk FOREIGN KEY ( pais )
         REFERENCES pais ( codigo );
 
-ALTER TABLE estadopedido
-    ADD CONSTRAINT estadopedido_novedad_fk FOREIGN KEY ( novedad_codigo )
-        REFERENCES novedad ( codigo );
-
-ALTER TABLE estadopedido
-    ADD CONSTRAINT estadopedido_pedido_fk FOREIGN KEY ( pedido_codigo )
+ALTER TABLE historialpedido
+    ADD CONSTRAINT historialpedido_pedido_fk FOREIGN KEY ( pedido_codigo )
         REFERENCES pedido ( codigo );
 
 ALTER TABLE historialpedido
@@ -160,16 +155,20 @@ ALTER TABLE historialpedido
         REFERENCES persona ( codigo );
 
 ALTER TABLE novedad
-    ADD CONSTRAINT novedad_persona_fk FOREIGN KEY ( persona_codigo )
-        REFERENCES persona ( codigo );
+    ADD CONSTRAINT novedad_estadopedido_fk FOREIGN KEY ( estadopedido_codigo )
+        REFERENCES estadopedido ( codigo );
 
 ALTER TABLE pedido
-    ADD CONSTRAINT pedido_historialpedido_fk FOREIGN KEY ( historial )
-        REFERENCES historialpedido ( codigo );
+    ADD CONSTRAINT pedido_estadopedido_fk FOREIGN KEY ( estadopedido_codigo )
+        REFERENCES estadopedido ( codigo );
 
 ALTER TABLE pedido
     ADD CONSTRAINT pedido_persona_fk FOREIGN KEY ( comprador )
         REFERENCES persona ( codigo );
+
+ALTER TABLE pedido
+    ADD CONSTRAINT pedido_producto_fk FOREIGN KEY ( producto_codigo )
+        REFERENCES producto ( codigo );
 
 ALTER TABLE pedido
     ADD CONSTRAINT pedido_publicacion_fk FOREIGN KEY ( publicacion )
@@ -180,12 +179,12 @@ ALTER TABLE persona
         REFERENCES ciudad ( codigo );
 
 ALTER TABLE persona
+    ADD CONSTRAINT persona_novedad_fk FOREIGN KEY ( novedad_codigo )
+        REFERENCES novedad ( codigo );
+
+ALTER TABLE persona
     ADD CONSTRAINT persona_tipoidentificacion_fk FOREIGN KEY ( tipoidentificacion_codigo )
         REFERENCES tipoidentificacion ( codigo );
-
-ALTER TABLE producto
-    ADD CONSTRAINT producto_pedido_fk FOREIGN KEY ( pedido_codigo )
-        REFERENCES pedido ( codigo );
 
 ALTER TABLE producto
     ADD CONSTRAINT producto_publicacion_fk FOREIGN KEY ( publicacion_codigo )
@@ -202,3 +201,21 @@ ALTER TABLE publicacion
 ALTER TABLE publicacion
     ADD CONSTRAINT publicacion_tipoventa_fk FOREIGN KEY ( tipoventa )
         REFERENCES tipoventa ( codigo );
+
+INSERT INTO pais (codigo,descripcion) values('1','COLOMBIA');
+INSERT INTO departamento(codigo,descripcion,pais) values('1','ANTIOQUIA','1');
+INSERT INTO ciudad(codigo,descripcion,departamento_codigo) values('1','ANTIOQUIA','1');
+INSERT INTO tipoidentificacion(codigo,descripcion) values('1','CEDULA DE CUIDADANIA');
+INSERT INTO estadopedido(codigo,descripcion) values('1','EN TRAMITE');
+INSERT INTO novedad(codigo,descripcion,estadopedido_codigo) values('1','ACEPTADO','1');
+INSERT INTO persona(codigo,nombres,apellidos,identificacion,tipoidentificacion_codigo,fechanacimiento,novedad_codigo,ciudad_codigo)
+values('1','Admin','Admin','1002345654','1','2022/5/2','1','1');
+INSERT INTO tipoventa(codigo,descripcion) values('1','Venta');
+INSERT INTO tipoventa(codigo,descripcion) values('2','Intercambio');
+INSERT INTO tipoventa(codigo,descripcion) values('3','Venta o intercambio');
+INSERT INTO tipoproducto(codigo,decripcion) values('1','Tecnologia');
+INSERT INTO tipoproducto(codigo,decripcion) values('2','Deporte');
+INSERT INTO tipoproducto(codigo,decripcion) values('3','Hogar');
+INSERT INTO tipoproducto(codigo,decripcion) values('4','Transporte');
+INSERT INTO tipoproducto(codigo,decripcion) values('5','Comida');
+INSERT INTO tipoproducto(codigo,decripcion) values('6','Construccion');

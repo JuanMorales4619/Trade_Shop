@@ -12,6 +12,7 @@ const Publication = () => {
     price: 0,
     amount: 0,
     TypeOfSale: "",
+    TypeOfProduct: "",
     Photo: "",
   };
 
@@ -27,21 +28,20 @@ const Publication = () => {
     let errors = {};
     if (!values.name) {
       errors.name = "Por favor, inserte el nombre del producto";
-    } else if (!/^[a-zA-ZÁ-ÿ0-9\s]{1,40}$/.test(values.name)) {
-      errors.name = "El nombre solo puede contener letras, espacios y numeros";
+    } else if (!/^[a-zA-ZÁ-ÿ0-9\s]{1,20}$/.test(values.name)) {
+      errors.name = "El nombre solo puede contener letras, espacios y numeros inferiores a 20 caracteres";
     }
 
     if (!values.description) {
       errors.description = "Por favor ingrese una descripcion";
-    } else if (!/^[a-zA-ZÁ-ÿ0-9\s]{1,40}$/.test(values.description)) {
+    } else if (!/^[a-zA-ZÁ-ÿ0-9\s]{1,100}$/.test(values.description)) {
       errors.description =
         "La descripcion solo puede contener letras, espacios y numeros";
     }
-
     if (!values.amount) {
       errors.amount = "Inserte la cantidad del producto";
-    } else if (!/^[0-9]{1,40}$/.test(values.amount)) {
-      errors.amount = "La cantidad solo puede contener numeros";
+    } else if (!/^[1-9]{1,40}$/.test(values.amount)) {
+      errors.amount = "La cantidad solo puede contener numeros mayores que 0";
     }
     if (!values.TypeOfSale) {
       errors.TypeOfSale = "Por favor seleccione un tipo de venta";
@@ -57,6 +57,9 @@ const Publication = () => {
     }
     if (!values.Photo) {
       errors.Photo = "Por favor ingrese una foto";
+    }
+    if (!values.TypeOfProduct) {
+      errors.TypeOfProduct = "Por favor seleccione un tipo de producto";
     }
 
     return errors;
@@ -136,8 +139,8 @@ const Publication = () => {
                 component={() => <div className="errors">{errors.amount}</div>}
               />
             </div>
-            <div className="Type-of-sale">
-              <p> Tipo de venta </p>
+            <div className="Type-of-product">
+              <a> Tipo de venta </a>
               <Field name="TypeOfSale" as="select">
                 <option value=""></option>
                 <option value="Venta">Venta</option>
@@ -148,6 +151,24 @@ const Publication = () => {
                 name="TypeOfSale"
                 component={() => (
                   <div className="errors">{errors.TypeOfSale}</div>
+                )}
+              />
+            </div>
+            <div className="Type-of-product">
+              <a> Tipo de producto </a>
+              <Field name="TypeOfProduct" as="select">
+                <option value=""></option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Deporte">Deporte</option>
+                <option value="Hogar">Hogar</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Comida">Comida</option>
+                <option value="Construccion">Construccion</option>
+              </Field>
+              <ErrorMessage
+                name="TypeOfProduct"
+                component={() => (
+                  <div className="errors">{errors.TypeOfProduct}</div>
                 )}
               />
             </div>
