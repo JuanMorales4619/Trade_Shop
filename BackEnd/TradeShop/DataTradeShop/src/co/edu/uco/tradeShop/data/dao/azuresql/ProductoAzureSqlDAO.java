@@ -26,13 +26,12 @@ public class ProductoAzureSqlDAO extends ConnectionSQL implements ProductoDAO{
 	
 	@Override
 	public void create(ProductoDTO producto) {
-		String sql = "INSERT INTO producto(nombre,imagen,tipoproducto) VALUES(?,?,?);";
+		String sql = "INSERT INTO producto(nombre,imagen,TipoProducto) VALUES(?,?,?)";
 
 		try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
 			preparedStatement.setString(1, producto.getNombre());
-			preparedStatement.setString(1, producto.getImagen());
-			preparedStatement.setInt(1, producto.getTipoProducto().getCodigo());
-
+			preparedStatement.setString(2, producto.getImagen());
+			preparedStatement.setString(3, producto.getTipoProducto());
 
 			preparedStatement.executeUpdate();
 
@@ -44,7 +43,7 @@ public class ProductoAzureSqlDAO extends ConnectionSQL implements ProductoDAO{
 					"An unexpected has ocurred problem trying to create the new Product on Azure SQL Server", exception);
 		}
 	}
-
+	
 	@Override
 	public void update(ProductoDTO producto) {
 		String sql = "INSERT INTO publicacion(descripcion,cantidad,precio,tipoventa,vendedor) VALUES(?,?,?,?,?)";
@@ -52,7 +51,7 @@ public class ProductoAzureSqlDAO extends ConnectionSQL implements ProductoDAO{
 		try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
 			preparedStatement.setString(1, producto.getNombre());
 			preparedStatement.setString(1, producto.getImagen());
-			preparedStatement.setInt(1, producto.getTipoProducto().getCodigo());
+			preparedStatement.setString(1, producto.getTipoProducto());
 
 			preparedStatement.executeUpdate();
 

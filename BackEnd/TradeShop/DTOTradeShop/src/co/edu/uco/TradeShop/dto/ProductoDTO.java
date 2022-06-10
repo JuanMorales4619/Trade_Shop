@@ -10,17 +10,17 @@ public class ProductoDTO {
 
 	private int codigo;
 	private String nombre;
-	private TipoProductoDTO tipoProducto;
+	private String tipoProducto;
 	private String imagen;
 	
 	public ProductoDTO() {
 		super();
 		setNombre(UtilText.EMPTY);
-		setTipoProducto(new TipoProductoDTO());
+		setTipoProducto(UtilText.EMPTY);
 		setImagen(UtilText.EMPTY);
 	}
 	
-	public ProductoDTO(int codigo, String nombre, TipoProductoDTO tipoProducto,
+	public ProductoDTO(int codigo, String nombre, String tipoProducto,
 			String imagen) {
 		super();
 		setCodigo(codigo);
@@ -41,11 +41,11 @@ public class ProductoDTO {
 	public void setNombre(String nombre) {
 		this.nombre = UtilText.getDefault(nombre);
 	}
-	public TipoProductoDTO getTipoProducto() {
+	public String getTipoProducto() {
 		return tipoProducto;
 	}
-	public void setTipoProducto(TipoProductoDTO tipoProducto) {
-		this.tipoProducto = UtilObject.getUtilObject().getDefault(tipoProducto, new TipoProductoDTO());
+	public void setTipoProducto(String tipoProducto) {
+		this.tipoProducto = UtilText.getDefault(tipoProducto);
 	}
 	public String getImagen() {
 		return imagen;
@@ -58,7 +58,7 @@ public class ProductoDTO {
 		validationMessages = UtilObject.getUtilObject().getDefault(validationMessages, new ArrayList<>());
 		
 		if(UtilText.isEmpty(getNombre())) {
-			validationMessages.add("Name of id type is required!!!");
+			validationMessages.add("Name of id product is required!!!");
 		}else if(UtilText.getDefault(getNombre()).length() > 20) {
 			validationMessages.add("Lenght of name of product must be less or equals to 20 characters!!!");
 		}else if(!UtilText.getDefault(getNombre()).matches("^[a-zA-ZÒ—·¡È…ÌÕÛ”˙⁄ ]*$")) {

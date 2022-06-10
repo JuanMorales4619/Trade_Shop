@@ -22,6 +22,7 @@ import co.edu.uco.tradeShop.data.dao.TipoIdentificacionDAO;
 import co.edu.uco.tradeShop.data.dao.TipoProductoDAO;
 import co.edu.uco.tradeShop.data.dao.TipoVentaDAO;
 import co.edu.uco.tradeShop.data.dao.azuresql.CiudadAzureSqlDAO;
+import co.edu.uco.tradeShop.data.dao.azuresql.ProductoAzureSqlDAO;
 import co.edu.uco.tradeShop.data.dao.azuresql.PublicacionAzureSqlDAO;
 import co.edu.uco.tradeShop.data.factory.DAOFactory;
 
@@ -113,7 +114,7 @@ private Connection connection;
 
 	@Override
 	protected void openConnection() {
-		String stringConnection = "jdbc:sqlserver://tradeshop-database-server.database.windows.net:1433;database=TradeShop-DB;user=tradeshop;password=TdSp123#;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
+		String stringConnection = "jdbc:sqlserver://tradeshop-database-server2.database.windows.net:1433;database=trade-shop2;user=tradeshop;password=TdSp123#;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 		try {
 			connection = DriverManager.getConnection(stringConnection);
 		}
@@ -220,8 +221,7 @@ private Connection connection;
 
 	@Override
 	public ProductoDAO getProductoDAO() {
-		// TODO Auto-generated method stub
-		return null;
+		return ProductoAzureSqlDAO.create(getConnection());
 	}
 
 	@Override
